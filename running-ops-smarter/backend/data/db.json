@@ -1,0 +1,18 @@
+{
+  "staff": [
+    { "id": 1, "name": "Asha Rao", "role": "Nurse", "email": "asha.rao@example.com", "phone": "555-0101" },
+    { "id": 2, "name": "Vikram Shah", "role": "Care Coordinator", "email": "vikram.shah@example.com", "phone": "555-0102" },
+    { "id": 3, "name": "Priya Nair", "role": "Physician", "email": "priya.nair@example.com", "phone": "555-0103" }
+  ],
+  "tasks": [
+    { "id": 1, "title": "Review patient intake forms", "description": "Verify all new intake forms for accuracy", "assignedTo": 2, "status": "in-progress", "priority": "high", "dueDate": "2026-07-25" },
+    { "id": 2, "title": "Update vaccination records", "description": "Sync latest vaccination data into system", "assignedTo": 1, "status": "pending", "priority": "medium", "dueDate": "2026-07-26" },
+    { "id": 3, "title": "Approve discharge summary", "description": "Sign off on discharge summary for room 204", "assignedTo": 3, "status": "pending", "priority": "high", "dueDate": "2026-07-24" }
+  ],
+  "schedules": [
+    { "id": 1, "staffId": 1, "date": "2026-07-24", "shiftStart": "07:00", "shiftEnd": "15:00", "notes": "Morning shift, ICU floor" },
+    { "id": 2, "staffId": 2, "date": "2026-07-24", "shiftStart": "09:00", "shiftEnd": "17:00", "notes": "Front desk coordination" },
+    { "id": 3, "staffId": 3, "date": "2026-07-24", "shiftStart": "08:00", "shiftEnd": "16:00", "notes": "Outpatient consultations" }
+  ],
+  "nextIds": { "staff": 4, "tasks": 4, "schedules": 4 }
+}

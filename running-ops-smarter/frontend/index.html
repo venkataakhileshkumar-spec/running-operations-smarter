@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Running Operations Smarter</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Running Operations Smarter</h1>
+    <p class="subtitle">Staff schedules &amp; task management for healthcare operations</p>
+  </header>
+
+  <section class="summary-bar" id="summary-bar">
+    <div class="summary-card"><span class="summary-number" id="sum-staff">-</span><span class="summary-label">Staff</span></div>
+    <div class="summary-card"><span class="summary-number" id="sum-schedules">-</span><span class="summary-label">Shifts Today</span></div>
+    <div class="summary-card"><span class="summary-number" id="sum-pending">-</span><span class="summary-label">Pending Tasks</span></div>
+    <div class="summary-card"><span class="summary-number" id="sum-done">-</span><span class="summary-label">Completed Tasks</span></div>
+  </section>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="staff">Staff</button>
+    <button class="tab-btn" data-tab="schedules">Schedules</button>
+    <button class="tab-btn" data-tab="tasks">Tasks</button>
+  </nav>
+
+  <main>
+    <!-- STAFF TAB -->
+    <section id="tab-staff" class="tab-panel active">
+      <div class="panel-header">
+        <h2>Staff</h2>
+        <button class="btn-primary" id="add-staff-btn">+ Add Staff</button>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Name</th><th>Role</th><th>Email</th><th>Phone</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="staff-table-body"></tbody>
+      </table>
+    </section>
+
+    <!-- SCHEDULES TAB -->
+    <section id="tab-schedules" class="tab-panel">
+      <div class="panel-header">
+        <h2>Schedules</h2>
+        <button class="btn-primary" id="add-schedule-btn">+ Add Shift</button>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Staff</th><th>Date</th><th>Start</th><th>End</th><th>Notes</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="schedules-table-body"></tbody>
+      </table>
+    </section>
+
+    <!-- TASKS TAB -->
+    <section id="tab-tasks" class="tab-panel">
+      <div class="panel-header">
+        <h2>Tasks</h2>
+        <button class="btn-primary" id="add-task-btn">+ Add Task</button>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Title</th><th>Assigned To</th><th>Priority</th><th>Due Date</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="tasks-table-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Modal for add/edit forms -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h3 id="modal-title">Add</h3>
+      <form id="modal-form"></form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
